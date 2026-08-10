@@ -1,0 +1,1 @@
+{"name":"daily-opportunity-feed","version":"1.0.0","private":true,"type":"module","scripts":{"generate":"node scripts/generate-feed.mjs","test":"node --test"},"engines":{"node":">=20"}}
