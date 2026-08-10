@@ -1,7 +1,5 @@
-name: Update daily opportunity feed
+name: Update daily opportunity feed (manual fallback)
 on:
-  schedule:
-    - cron: '15 23 * * *'
   workflow_dispatch:
 permissions:
   contents: write
@@ -14,10 +12,10 @@ jobs:
         with: {node-version: 20}
       - run: npm test
       - run: npm run generate
-      - name: Commit fresh feed
+      - name: Commit fallback feed
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add data
-          git diff --cached --quiet || git commit -m "data: update daily feed"
+          git diff --cached --quiet || git commit -m "data: update fallback feed"
           git push

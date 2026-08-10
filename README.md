@@ -22,6 +22,6 @@ Open `http://localhost:8000`. A local server is required because browsers normal
 
 ## Automation
 
-`daily-feed.yml` runs at 07:15 Asia/Taipei every day and commits a fresh feed. It can also run manually from Actions. `pages.yml` deploys whenever `main` changes.
+The daily ChatGPT task is the single scheduled content pipeline: it researches and analyzes the day's signals, writes the website JSON to `main`, and that commit triggers `pages.yml` to deploy GitHub Pages.
 
-No API key is required for v1. A future LLM enrichment step can be added behind an optional secret without changing the site or data format.
+`daily-feed.yml` is retained only as a manual RSS fallback. It has no cron schedule and will not overwrite the GPT-generated daily briefing. Archive filenames use the Asia/Taipei calendar date.
