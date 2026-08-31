@@ -1,0 +1,97 @@
+{
+  "generatedAt": "2026-08-30T23:57:28Z",
+  "timezone": "Asia/Taipei",
+  "items": [
+    {
+      "id": "2026-08-31-executive-summary",
+      "title": "30 秒摘要｜AI 影片第一次快過播放速度；Coding 工具開始被供應商政治切割",
+      "url": "https://fal.ai/learn/devs/introducing-h3-max-by-fal",
+      "source": "fal / OpenAI / WIRED / Replit",
+      "publishedAt": "2026-08-31",
+      "category": "摘要",
+      "summary": "週末真正跨線的只有一件：H3 Max 約 3 秒生成 5 秒帶聲影片，Infinite Slop 已把它做成觀眾用聊天室即時改劇情的連續直播。另一條主線是 AI 工具控制權：OpenAI 宣布 11 月起停止向 Cursor 提供模型；同時有未確認報導稱 Codex 正測試可持續工作到被手動停止的 Persistent mode。最大能力跳躍：高品質生成影片從離線素材變成可即時回應的互動媒介。",
+      "whyItMatters": "你已有 ChatGPT Plus＋Codex＋Google Pro，所以本期不推薦再訂一個普通聊天工具。真正值得花時間的是測 H3 Max 是否能替紙屬英文或產品行銷建立新內容形式；Cursor 事件則提醒你，依賴單一模型供應商的第三方工具可能突然失去核心模型。",
+      "opportunity": "本期沒有證據充足、該立刻開坑的獨立 SaaS。即時 AI 影片是新表面，但目前最成功案例靠 fal 贊助算力，受眾留存、內容安全與單位經濟仍未證明。",
+      "action": "先讀第 1、2 則；若今天只做一件事，用 30 分鐘在 fal 生成同一個 5 秒 Paper English 宣傳片三次，記錄實際延遲、可用率與每個可發布片段成本。",
+      "score": "關聯 5/5｜新能力 5/5｜商機 4/5"
+    },
+    {
+      "id": "2026-08-31-h3-max-infinite-slop",
+      "title": "1｜最大能力跳躍＋Wild Card：AI 影片快過播放，聊天室已能即時改下一幕",
+      "url": "https://fal.ai/learn/devs/introducing-h3-max-by-fal",
+      "source": "fal / Pieter Levels",
+      "publishedAt": "2026-08-29",
+      "category": "Try now",
+      "summary": "fal 發布 H3 Max：官方稱 5 秒影片約 3 秒生成，約為官方 MiniMax H3 endpoint 的 35 倍吞吐，保留原生同步聲音；自家人評與兩個外部榜單皆列第一。8 月 29 日 Pieter Levels 上線 Infinite Slop，讓觀眾在聊天室輸入內容、系統把它接成下一段影片，證明『比播放更快』已能組成連續互動直播，而不只是 benchmark。",
+      "whyItMatters": "ChatGPT Plus／Codex 可以寫劇本、產圖和程式，但無法在觀眾看完前持續生成下一段帶聲影片。這打開互動節目、遊戲事件、直播廣告與即時教材的新產品表面；不過 fal 的速度與品質數字仍包含供應商自評，Infinite Slop 的成本目前由 fal 贊助。",
+      "opportunity": "最可信的早期應用不是泛用影片 SaaS，而是有現成流量與題材的互動直播：觀眾投票決定下一題、下一幕或品牌情境。收費可從贊助、付費 prompt／投票或品牌置入測起；最大風險是每分鐘成本、內容審核與敘事很快失控。",
+      "action": "Try now｜30 分鐘：用 fal Playground 以同一個 Paper English 主題生成 3 支 5 秒片，記錄 wall time、單支成本、角色／文字穩定度；若 3 支沒有 2 支可用，就不碰直播 MVP。",
+      "score": "關聯 4/5｜新能力 5/5｜商機 5/5"
+    },
+    {
+      "id": "2026-08-31-openai-cursor-cutoff",
+      "title": "2｜OpenAI 將停止供應 Cursor：第三方 coding 工具第一次被模型陣營戰直接斷糧",
+      "url": "https://openai.com/index/our-decision-on-cursor-following-its-acquisition-by-spacex/",
+      "source": "OpenAI",
+      "publishedAt": "2026-08-28",
+      "category": "Watch",
+      "summary": "OpenAI 8 月 28 日正式通知 SpaceX，擬於 11 月 12 日終止向被收購後的 Cursor 供應 OpenAI 模型，並明言不提供未來的 Astra；理由是無法信任 Musk 旗下公司遵守合約。OpenAI 給足合約通知期，但核心能力退出日期已明確。",
+      "whyItMatters": "你主要用 Codex，現在不用換工具；重要的是產業訊號：第三方 AI IDE 的模型選單不是永久資產，供應商、收購與條款可直接改變可用能力。你自己的 worker 也不該把品質與流程綁死在單一模型名稱，尤其是教材產線與長期 Agent job。",
+      "opportunity": "這會提高 model-agnostic harness、回歸測試與可切換 provider 的價值，但通用路由層已高度競爭。對你最實際的是把既有產線的輸出合約與模型供應商解耦，而不是另做一個 router SaaS。",
+      "action": "Watch｜30 分鐘：只檢查 eng-tutor-saas 是否能在不改 schema／finisher 的前提下更換生成模型；若 provider 已集中封裝，就不做任何改動。",
+      "score": "關聯 5/5｜新能力 2/5｜商機 4/5"
+    },
+    {
+      "id": "2026-08-31-codex-persistent-mode-report",
+      "title": "3｜未確認報導：Codex 測試 Persistent mode，任務可能一路做至你手動停止",
+      "url": "https://www.wired.com/story/openai-is-developing-a-persistent-ai-agent",
+      "source": "WIRED / 未確認報導",
+      "publishedAt": "2026-08-28",
+      "category": "Watch",
+      "summary": "WIRED 報導 OpenAI 正測試 Codex Persistent mode：任務不再因既定時間或步數自動結束，而是持續工作到使用者停止，並可能依既有互動與使用者知識主動建立後續工作、低頻通知。OpenAI 尚未正式發布，功能、方案、權限與上線時間都未確認。",
+      "whyItMatters": "若成真，這比一般模型升級更直接改變你的工作流：紙屬英文 production、repo 維護與研究實驗可從『一回合交付』走向持續營運。但上一期的 Agent 逃逸事故也說明，持續性越高，憑證範圍、花費上限、kill switch 與 audit log 越不能省。",
+      "opportunity": "現在沒有可做的產品角度；平台能力尚未公開，搶先包裝只會建立在傳聞上。真正該準備的是長任務的驗收條件、預算上限與可中止設計。",
+      "action": "Watch｜不做測試、不改流程。等 OpenAI 官方 release notes 出現可用入口、限制與安全模型後，再拿一個可隨時中止的非 production repo 做 60 分鐘試跑。",
+      "score": "關聯 5/5｜新能力 5/5｜商機 2/5"
+    },
+    {
+      "id": "2026-08-31-replit-growth-kit",
+      "title": "4｜Replit Growth Kit：Coding Agent 開始從「做出 App」往找客戶、外聯與收款延伸",
+      "url": "https://replit.com/growth-kit",
+      "source": "Replit",
+      "publishedAt": "2026-08-29",
+      "category": "Ignore for now",
+      "summary": "Replit 上線 Growth Kit，把找潛在客戶、lead enrichment、外聯、成長分析、內容與收款整理成可直接交給 Replit Agent 的技能。這不是新模型，而是把 agentic app builder 的終點從『部署完成』推到『拿到第一批客戶』。",
+      "whyItMatters": "這正中 solo builder 的真正瓶頸，但它目前更像 15 組技能與合作服務的打包，不代表比你現有 Codex＋人工行銷更會賣。對紙屬英文而言，FB 家長社團的信任、台灣語境與產品證據仍不是裝一個 skill 就能自動解決。",
+      "opportunity": "產業訊號很強：開發工具開始爭奪 distribution workflow；但『再做一套通用 growth agent』不是好缺口。較可能的洞是台灣特定渠道與高摩擦流程，例如 FB 社團合規內容、LINE 詢問到試用轉換，但仍需真人資料證明。",
+      "action": "Ignore for now｜不要為此訂 Replit。先看官方技能目錄，若有一個能直接替代你本週已排定的行銷工作，再用免費入口測；沒有就關掉。",
+      "score": "關聯 4/5｜新能力 3/5｜商機 4/5"
+    },
+    {
+      "id": "2026-08-31-opportunity",
+      "title": "本期商機判斷｜沒有強到該開新 repo；即時影片先做成本與留存驗證",
+      "url": "https://levels.io/i-built-infinite-slop",
+      "source": "Opportunity of the Briefing",
+      "publishedAt": "2026-08-30",
+      "category": "商機",
+      "summary": "最接近機會的是『特定受眾的互動生成直播』：目標使用者可是假日時段需要持續內容的教育品牌或直播主；痛點是傳統直播必須有人在線、預製內容無法回應聊天室。最小 MVP 是單一主題、聊天室投票、5 秒片段佇列、敏感詞攔截與 rerun 緩衝。",
+      "whyItMatters": "分發可以先借紙屬英文既有 FB 流量或直播平台，變現可測品牌贊助、付費決定劇情或導流試用。但目前唯一爆紅案例是 novelty 驅動且算力由 fal 贊助，尚無付費、留存與正常成本證據。",
+      "opportunity": "結論：本期沒有強商機。只有在 30 分鐘模型測試通過後，且能取得真實每分鐘成本，再用一次 30 分鐘小直播測平均觀看與互動率；兩項都過才值得開 MVP。",
+      "action": "Watch｜先測模型，不開 repo。若 3 支測片可用率低於 67%，或估算每小時成本無法被一次合理贊助覆蓋，直接停止。",
+      "score": "關聯 4/5｜新能力 5/5｜商機 4/5"
+    },
+    {
+      "id": "2026-08-31-watchlist",
+      "title": "觀察清單｜NVIDIA／Hugging Face、Google 書籍來源、PhoneLLM 中文能力",
+      "url": "https://blog.google/innovation-and-ai/products/gemini-notebook/expert-intelligence-leading-sources/",
+      "source": "Watchlist",
+      "publishedAt": "2026-08-31",
+      "category": "Watchlist",
+      "summary": "NVIDIA 據報洽談約 US$13B 收購 Hugging Face，但雙方仍未正式公告；Google Expert Intelligence 已讓部分已購 Google Play Books 直接進 Gemini Notebook，未來才會擴到訂閱、研究報告與教科書；PhoneLLM 在官方英文 PhoneBench 宣稱接近 GPT-5.6 Terra、延遲與成本更低，但尚無可信的台灣中文通話證據。",
+      "whyItMatters": "三者分別可能改變開源模型分發、你用 Google Pro 讀碩論／教科書的方式，以及台灣小商家語音 Agent 的成本。但現在都缺少一個關鍵條件：正式交易、台灣可用內容，或台灣中文實測。",
+      "opportunity": "目前無；任何一項缺口補齊才升格。",
+      "action": "Watch｜下一期只在官方收購公告、Google 開放台灣可用教材／研究來源，或 PhoneLLM 出現台灣中文人工評測時追。",
+      "score": "關聯 4/5｜新能力 3/5｜商機 3/5"
+    }
+  ]
+}
