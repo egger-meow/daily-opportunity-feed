@@ -1,0 +1,110 @@
+{
+  "generatedAt": "2026-10-23T01:34:33Z",
+  "timezone": "Asia/Taipei",
+  "items": [
+    {
+      "id": "2026-10-23-executive-summary",
+      "title": "30 秒摘要｜AI 開始主動接管日常工作，也開始把『可驗證、可路由、可持續監控』做成產品",
+      "url": "https://claude.com/resources/articles/claude-duet",
+      "source": "Anthropic / OpenAI / Google Cloud",
+      "publishedAt": "2026-10-23",
+      "category": "摘要",
+      "summary": "10 月 20–23 日的主線不是模型跑分，而是三個能力邊界一起前進：Claude Duet 讓 Agent 用自己的雲端電腦主動巡查 6,000 多個連接器並在背景做事；OpenAI Decisions API 正式 GA，以每百萬輸入 token US$0.10 回傳機率、選項或分數，能直接放進語音與 Agent 的即時路由；Anthropic 則讓 Claude 在 123 個真實函式庫的 RISC-V binary 上生成可由 Rocq kernel 機械檢查的證明。Claude Security 也從單次掃描進到持續追蹤修復。Google Cloud 同週納入 OpenAI 模型與完整 Claude Platform，顯示企業 AI 正從選一家模型，轉向共用治理層動態選模型。",
+      "whyItMatters": "你已有 ChatGPT Plus＋Codex＋Google Pro，這輪沒有理由換掉 Codex。真正值得動手的是 Decisions API：它幾乎就是你的 selective routing 題目產品化，而且 Speak 已回報 GPT-Live 的下一步決策從 1.4 秒降到 0.13 秒。Claude Duet 的主動性明顯超過一般 ChatGPT chat，但台灣尚不能加入美國候補；其餘三項應當作研究與產業邊界，不必新增訂閱。",
+      "opportunity": "本期唯一證據夠完整的機會是『低延遲教學路由層』：替語音家教或互動練習在每一輪判斷繼續、追問、提示或轉強模型，並留下信心與結果 log。官方已有語言學習延遲數據、價格與 probability output；可先在你自己的英語 tutor 做小型 A/B，而不是先做通用 SaaS。",
+      "action": "用 45–60 分鐘在 Decisions Playground 建 30 筆真實英文學習 turn，定義 continue／clarify／hint／escalate 四個 choice；比較決策正確率、信心與 Responses API 延遲。若低信心樣本真的集中在錯例，再接到一條非 production 的語音流程。",
+      "score": "關聯 5/5｜新能力 5/5｜商機 5/5"
+    },
+    {
+      "id": "2026-10-23-claude-duet",
+      "title": "1｜最大能力跳躍：Claude Duet 會先來找你，帶著雲端電腦在你離線後繼續工作",
+      "url": "https://claude.com/resources/articles/claude-duet",
+      "source": "Anthropic",
+      "publishedAt": "2026-10-21",
+      "category": "Watch",
+      "summary": "Claude Duet 是獨立 iOS、Android 與網頁 App：每天早上主動整理已連接 App 的重點，之後每隔數小時檢查一次，只有需要注意時才通知。它沿用 Claude 的 memory、skills 與 6,000 多個 connectors／plugins，並有自己的 VM 與 browser，所以手機或電腦關機後仍能排會議、做 dashboard、財務預測、原型與 web app。寄信、付款、簽署、刪除前會顯示動作並等批准；證券交易與帳戶間轉帳禁止。研究預覽只從美國 Pro／Max 候補開始，背景檢查也會消耗同一方案額度。",
+      "whyItMatters": "ChatGPT Plus＋Codex 通常等你發起任務；Duet 跨到『主動注意、持續監看、離線執行』，而且把 Gmail、Slack、QuickBooks、Stripe、Gusto、LinkedIn、Docusign、HubSpot、Canva、Shopify 等工作面放進同一條長期 thread。這是值得知道的能力差，但你在台灣現在無法使用，也不應為候補先升 Max。",
+      "opportunity": "真正的新表面不是聊天 bot，而是『何時該打擾人』與『哪些動作一定要核准』。可借鏡到教育陪練、研究監控或小商家營運；但 Duet 本身已有廣大 connector 分發，solo engineer 做通用個人助理沒有勝算，應只做垂直領域的判斷與稽核。",
+      "action": "Watch｜先不要訂閱。把官方列出的三個限制記進 agent 設計：週期檢查會吃額度、不能看其 browser、可能誤判 urgent；等台灣開放且能匯出完整 action log，再用一週測你自己的 Gmail／Calendar 工作流。",
+      "score": "關聯 5/5｜新能力 5/5｜商機 4/5"
+    },
+    {
+      "id": "2026-10-23-openai-decisions-api-ga",
+      "title": "2｜OpenAI Decisions API 正式 GA：用 US$0.10／百萬 input token 把信心路由放進 Agent 熱路徑",
+      "url": "https://openai.com/index/decisions-api/",
+      "source": "OpenAI",
+      "publishedAt": "2026-10-22",
+      "category": "Try now",
+      "summary": "Decisions API 現已全面可用。開發者先限定答案，再送文字、圖片或原生 JSON；一次最多問 400 題，回傳 predicate probability、choice 加各選項機率／confidence，或 rubric score。它以 GPT-6 Luna 為底，官方稱比同模型走 Responses API 最快 10 倍；input 每百萬 token US$0.10、cached input US$0.01，沒有 output token 費。新版本加入 GPT-Live 原生 trigger、prompt caching、美／歐資料駐留與亞洲容量。供應商案例中，Sierra 的 p95 低於 280ms、每次成本低 90%；Datadog 對 Agent shell command 風險評分的 p95 快 40 倍；這些仍是各家公司自報。",
+      "whyItMatters": "這不是又一個回答模型，而是可直接驅動 continue／retry／ask／escalate 的便宜控制器，正中你的 selective routing、異質成本與不確定性研究。相較從 ChatGPT 或 Codex 的自然語言硬解析 confidence，它有固定 schema、可批量評測、可放進即時語音 hot path；也比上期 Perplexity Decisions 更容易接進你已使用的 OpenAI stack。",
+      "opportunity": "可當 Reaper-C 的 router baseline，也能替英語家教在每輪語音決定提示強度。最大風險是回傳 probability 不等於在 distribution shift 下已校準；若沒有 held-out set、錯誤成本與人工升級規則，便宜只會讓錯誤更快。",
+      "action": "Try now｜在 Playground 放 30–50 筆真實 routing examples，預先寫好 gold label 與成本矩陣；畫 confidence threshold 對 error／upgrade rate 的曲線，並和 Perplexity 27B 或目前 heuristic 比。不要只看平均準確率。",
+      "score": "關聯 5/5｜新能力 5/5｜商機 5/5"
+    },
+    {
+      "id": "2026-10-23-anthropic-formal-verification",
+      "title": "3｜Claude 在 123 個真實函式庫的 binary 上寫出機械可驗證證明，測試開始跨向『永遠不會 crash』",
+      "url": "https://www.anthropic.com/research/formal-verification",
+      "source": "Anthropic / Theorem",
+      "publishedAt": "2026-10-22",
+      "category": "Try now",
+      "summary": "Anthropic 與 Theorem 把 OSS-Fuzz entry point 編譯成 RISC-V binary，再讓 Claude 生成 Rocq proof，證明在特定假設下、所有小於 64MB 的輸入都不會觸發 memory error 或 assertion。幾週內完成 123 個函式庫、239 個 entry points，約 1.8 億行 proof；Rocq kernel 負責檢查，不必信任模型的文字說明。證明過程還找出數百個 bug，包括需要約 20MB 特殊輸入的 out-of-bounds write、十多年未發現的 logic bug；部分 proofs、RISC-V／OS semantics 與 Claude skill 已公開。限制同樣重要：目前是單執行緒 static RISC-V、固定記憶體等假設，且許多 spec 是『既有 fuzz test 對所有輸入都通過』，不是整套軟體完全正確。",
+      "whyItMatters": "Codex 的測試通過只能說跑過的案例沒壞；這裡跨到 proof kernel 能獨立驗證的全輸入保證，且直接針對編譯後 binary。對你的 eval reliability 研究，這是把 evaluator 從另一個會犯錯的 LLM，換成小型可信 kernel 的具體範例；對一般 app 開發仍太重，不能把 123 個函式庫外推成『Claude 已能證明所有程式』。",
+      "opportunity": "近期最實際的市場在壓縮、解析器、加密與基礎 library 等高風險邊界，而非 Flutter app。Theorem 已提供同 pipeline 給其他開源專案，代表它更像新服務類別；但數億 token、spec 品質與架構假設仍限制成本與適用範圍。",
+      "action": "Try now｜花 30–45 分鐘下載公開 skill 與一份已釋出的 proof，先用 Rocq kernel 重驗結果，再挑你熟悉的一個小 parser 看 theorem statement 到底保證什麼；只做 proof inspection，不立刻導入 production。",
+      "score": "關聯 5/5｜新能力 5/5｜商機 4/5"
+    },
+    {
+      "id": "2026-10-23-claude-security-continuous",
+      "title": "4｜Claude Security 從一次掃描變成持續系統：跨 repo 建 threat model，修好會關、復發會重開",
+      "url": "https://claude.com/resources/articles/claude-security-now-scans-continuously-and-tracks-fixes",
+      "source": "Anthropic",
+      "publishedAt": "2026-10-21",
+      "category": "Ignore for now",
+      "summary": "Claude Security 現在先做 deep baseline，再依變更風險與複雜度持續掃描；一個 project 可跨多個 repo，團隊能加入部署與安全政策，並編輯 Claude 產生的 threat model。finding 會附 exploit path 與相對 threat model 的 severity，修復進版後自動標 closed，若同一問題回來則 reopening。API、webhook 與 MCP 可讓 Claude Code 在同一 session 讀 finding、開始修復、標記 resolved。Anthropic 稱 beta 至今數千組織找到逾 100 萬漏洞，但沒有公開 false-positive rate；目前只限 Claude Enterprise public beta，並提供兩個月每月 US$25,000 credits。",
+      "whyItMatters": "Codex 或 Claude Code 的一次性 review 解決『這個 diff 有沒有問題』；新產品處理的是『整個系統今天的風險狀態、跨服務 attack path、是否真的修掉』。能力邊界很實在，但你的個人 repo 沒有理由買 Enterprise，也不該被免費 credits 誤導成低成本工具。",
+      "opportunity": "可借鏡的不是再做 scanner，而是 findings lifecycle：context、evidence、owner、fix commit、reopen 與可重播 attack path。對 solo engineer，現有 GitHub security、SAST 與 Codex review 足夠；只有有多 repo、正式資安 owner 與修復 SLA 的團隊才可能付費。",
+      "action": "Ignore for now｜不申請 Enterprise。只把你最重要 repo 的 security issue template 補上 affected commit、reproduction、fix commit 與 reopen condition；等 Anthropic 公布定價、false positives 與非 Enterprise 方案再評估。",
+      "score": "關聯 3/5｜新能力 4/5｜商機 3/5"
+    },
+    {
+      "id": "2026-10-23-google-cloud-multimodel-control-plane",
+      "title": "5｜Google Cloud 同週收進 OpenAI 與完整 Claude Platform：企業的『模型供應商』開始退到治理層後面",
+      "url": "https://cloud.google.com/blog/products/ai-machine-learning/google-cloud-brings-openai-models-to-customers",
+      "source": "Google Cloud / Anthropic",
+      "publishedAt": "2026-10-22",
+      "category": "Watch",
+      "summary": "Google Cloud Model Garden 開始把 GPT-6 Astra、GPT-6.1 Sol、GPT-6 Luna 提供給 select enterprise private preview；本機 Codex CLI／Desktop 可直接以 Gemini platform inference 執行，帳單、IAM、audit 與 cloud commitment 統一。隔天 Anthropic managed Claude Platform 在 Google Cloud GA：Fable 5.1、Opus／Sonnet／Haiku 5.5、Managed Agents、computer use、skills、MCP、prompt caching 等可同日取得，並同樣吃 Google Cloud commitment。Google 因此成為同一企業平台同時提供三家主要閉源模型的 hyperscaler；但 OpenAI 仍是 private preview，ZDR 與 Confidential Compute 也標示 coming soon。",
+      "whyItMatters": "你的 Google AI Pro 訂閱不等於這個企業 Cloud 服務，因此今天不能用，也不值得填表。真正重要的是架構訊號：企業會在同一 IAM／billing／audit 邊界內動態換 Gemini、Claude、OpenAI，selective routing 的決策單位從 API key 變成治理層；單一模型 wrapper 的護城河再下降。",
+      "opportunity": "若日後服務企業，價值在跨模型 eval、policy、成本與可追溯路由，而不是代接三個 API。對個人產品目前沒有直接商機：private preview、cloud commitment 與採購流程都不是 solo MVP 的分發路徑。",
+      "action": "Watch｜不申請 preview。把研究架構中的 provider adapter、decision log 與 cost model 保持 vendor-neutral；等 OpenAI 轉 GA、台灣 region／ZDR 與實際價目出來再跑 benchmark。",
+      "score": "關聯 4/5｜新能力 4/5｜商機 3/5"
+    },
+    {
+      "id": "2026-10-23-opportunity",
+      "title": "本期商機｜低延遲教學路由層：只在困難回合升級模型，把語音家教做得更快也更可評測",
+      "url": "https://openai.com/index/decisions-api/",
+      "source": "Opportunity of the Briefing",
+      "publishedAt": "2026-10-23",
+      "category": "商機",
+      "summary": "目標使用者是已有語音練習內容、但每輪都呼叫昂貴模型且回應慢的台灣英語 tutor／教育產品；痛點是該追問、提示、糾錯或升級強模型，目前常靠硬規則或讓大模型自己寫一段理由。最小 MVP 只做四路選擇與 confidence log：continue、clarify、hint、escalate，先用 100 個匿名學習回合離線評測，再接一條 GPT-Live 測試流程。官方證據是 Speak 測試下一步決策從 1.4 秒降到 0.13 秒，且 API 價格低到能逐 turn 使用。",
+      "whyItMatters": "這同時重用你的英語教育產品與 selective routing 研究，不需重新找產業。比起做『AI 英文老師』，切口更小、效果可量：p95 latency、錯誤路由、升級率、學習者中斷率與每分鐘成本。",
+      "opportunity": "分發先用自己的 tutor 當 design partner，公開一份中英 code-switch routing benchmark，再找 3 位台灣補教／EdTech 工程師看 demo；若能穩定降低延遲與大模型使用量，可收一次性整合費＋每千回合用量。最大風險是 confidence 未校準、兒少／學習資料隱私、OpenAI 自己內建同類 routing，以及省下的模型費不足以支撐 SaaS 毛利。",
+      "action": "先花 60 分鐘做 100 筆 labeled CSV schema 與成本矩陣，不寫 dashboard；達到『錯誤率不升、p95 至少降 40%、強模型呼叫降 30%』三項門檻，再做 live demo，否則停在研究 baseline。",
+      "score": "關聯 5/5｜新能力 5/5｜商機 5/5"
+    },
+    {
+      "id": "2026-10-23-watchlist",
+      "title": "觀察清單｜Patch the Planet、NVIDIA Agent Toolkit 與 ChatGPT Ads 擴區都重要，但本輪不值得你開新工具",
+      "url": "https://openai.com/index/coordinated-disclosure-of-critical-vulnerabilities/",
+      "source": "OpenAI / NVIDIA / Anthropic",
+      "publishedAt": "2026-10-23",
+      "category": "Watchlist",
+      "summary": "OpenAI 公布 Patch the Planet 過去兩個月協調修補 PHP 關鍵漏洞，顯示 Agent 找洞後的跨公司通報正在制度化；但對你的個人工作流沒有可直接測的新產品。NVIDIA 在 GTC Berlin 擴充 Agent Toolkit、企業資料 grounding 與 physical-AI 工具，仍以大型企業與 NVIDIA stack 為主，尚未形成值得你離開 Codex 的單一能力。ChatGPT Ads 再擴 26 國且稱已有逾 10 萬廣告主，但台灣在 9 月已納入、本站也已報過分發機會，因此不重複升榜。本期沒有額外 Wild Card。",
+      "whyItMatters": "三件事各自代表安全協調、企業 Agent 基礎設施與對話式廣告成長，但都不會讓你現在增加訂閱、改主力工具或開出可信 MVP；知道方向即可。",
+      "opportunity": "只有 Patch the Planet 公開更多可重現流程、NVIDIA 工具能在消費級 GPU 跑出清楚效果，或 ChatGPT Ads 提供台灣開發者可用的 conversion API 時再升級。",
+      "action": "Watch｜本輪不安裝、不申請、不付費；只保留連結，下一期看是否出現台灣可用性、公開定價或可重現 case study。",
+      "score": "關聯 3/5｜新能力 3/5｜商機 2/5"
+    }
+  ]
+}
