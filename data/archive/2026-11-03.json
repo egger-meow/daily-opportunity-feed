@@ -1,0 +1,110 @@
+{
+  "generatedAt": "2026-11-03T01:45:32Z",
+  "timezone": "Asia/Taipei",
+  "items": [
+    {
+      "id": "2026-11-03-executive-summary",
+      "title": "30 秒摘要｜可替換 Codex 底層的多模態工程模型已開 API，AI 評測也從 benchmark 轉向替人辦完生活雜事",
+      "url": "https://longcat.ai/blog/longcat-2.5",
+      "source": "LongCat / OpenAI / AGIBOT / Foxconn / IETF",
+      "publishedAt": "2026-11-03",
+      "category": "摘要",
+      "summary": "10 月 30 日至 11 月 3 日只有一項值得你立刻動手：美團 LongCat-2.5 把原生視覺、長時間 coding、1M context 與工具執行做成可直接接進 Codex／Claude Code 的 API，限時價每百萬 input／output tokens 為 US$0.30／US$1.20，適合用真 repo 做低成本 side-by-side。其餘是重要方向而非換工具理由：OpenAI 用 3,995 人調查建立 LifeVal，評估 Agent 是否真的完成育兒、政府服務、財務與採買；智元以六台 G2 在真實便利店直播 24 小時；鴻海把 Vera Rubin AI factory 做成到場最快 14 天可部署的貨櫃；OpenAI 承諾採用跨供應商的 robots.txt AI training preference。",
+      "whyItMatters": "你已有 ChatGPT Plus＋Codex＋Google Pro，不需要新增聊天訂閱。本輪唯一合理的 30–45 分鐘測試，是把 LongCat 當 Codex 的替代模型，而不是搬去新聊天介面；其餘四則幫你辨認下一個能力邊界：日常代辦 eval、具身 Agent 的真實可靠度、台灣 AI factory 供應鏈，以及網站內容授權控制。",
+      "opportunity": "本期沒有足夠強的 Opportunity of the Briefing。最接近的是繁中／台灣版日常 Agent eval，但目前只有研究缺口，沒有已驗證的付費買方、持續維護成本或可靠分發；先做研究樣本，不把它包裝成 SaaS。",
+      "action": "用 45 分鐘把同一個含截圖、跨檔修改與測試的 repo 任務分別交給現有 Codex 模型與 LongCat-2.5；只比較完成率、人工介入、總 token 成本與視覺理解錯誤，沒有明顯勝出就不改預設工具。",
+      "score": "關聯 5/5｜新能力 5/5｜商機 3/5"
+    },
+    {
+      "id": "2026-11-03-longcat-2-5",
+      "title": "1｜最大能力跳躍：LongCat-2.5 可直接接進 Codex，讓你用低價 API 測原生視覺與長時間工程",
+      "url": "https://longcat.ai/blog/longcat-2.5",
+      "source": "LongCat / Meituan",
+      "publishedAt": "2026-11-02",
+      "category": "Try now",
+      "summary": "美團發布 LongCat-2.5：1.6T 總參數、每 token 約啟用 48B，原生多模態，訓練加入更多長軌跡與可重現的真實 Agent 失敗案例。API 已於 11 月 2 日上線，支援 OpenAI Responses、Anthropic Messages、tool calling、1M context 與最高 128K output；官方文件提供 Codex、Claude Code、Hermes 等 harness 的接法。限時價格為每百萬 uncached input US$0.30、cached input US$0.006、output US$1.20。官方宣稱它能做視覺 coding、3D、複雜 codebase 與完整專案，但 benchmark 與能力比較主要仍是供應商資料。",
+      "whyItMatters": "它不是要求你放棄 Codex 的另一個聊天 App，而是能替換底層模型、保留熟悉 harness 的可測變數。相較 ChatGPT Plus＋Codex，真正的新組合是『看設計或畫面→跨大型 repo 長時間執行→用極低 token 價完成』；如果視覺與長任務可靠度接近 frontier 模型，你的批次實驗與多 Agent 成本會明顯下降。",
+      "opportunity": "對你的 selective routing／eval 研究，它是很好的便宜候選：可測哪些視覺工程任務應路由到 LongCat、何時仍需 Sol／Astra。不要做通用 wrapper；價值在可重現的路由規則、失敗分類與成本曲線。",
+      "action": "Try now｜花 45 分鐘在既有 Codex harness 設定 LongCat base URL，跑一個真實截圖修 UI＋跨檔測試任務；設定相同驗收條件，保存 token、時間、測試結果與人工修正。限時價可能改變，測完再決定是否納入 routing。",
+      "score": "關聯 5/5｜新能力 5/5｜商機 4/5"
+    },
+    {
+      "id": "2026-11-03-openai-lifeval",
+      "title": "2｜OpenAI LifeVal 把 Agent 評測拉回真生活：不是回答得好，而是能否把幼兒園、政府服務與採買辦完",
+      "url": "https://openai.com/index/lifeval/",
+      "source": "OpenAI",
+      "publishedAt": "2026-11-02",
+      "category": "Watch",
+      "summary": "OpenAI 公布 LifeVal：先用美國與跨國時間使用研究整理生活任務，再調查具人口代表性的 3,995 人，找出人們最想交給個人 Agent 的育兒、健康、教育、家庭行政、財務、購物與政府服務。展示案例包括搬家後找幼兒園、淹水前安排志工、找房並把地契加入政府網站購物車等，最新模型在部分案例得到 90.4%–100%。OpenAI 說這些進步來自 browser、computer use 與 connectors 訓練；但公開頁未提供完整 task set、grader、人工基線或可下載 benchmark，因此高分不能視為獨立證明。",
+      "whyItMatters": "Codex 擅長可驗證的工程輸出，ChatGPT Agent 的生活任務卻常卡在偏好澄清、跨網站操作與『何時必須停下來問人』。LifeVal 把評測目標從漂亮回覆改成實際結果，和你的 reward hacking／eval reliability 研究直接相連，也提醒產品機會可能在任務驗收與接管點，而不是更會聊天。",
+      "opportunity": "繁中／台灣版生活 Agent eval 是可信研究方向：政府網站、健保、交通、超商、學校與 LINE 生態和美國樣本不同。但目前沒有公開 LifeVal protocol 可對齊，也沒有付費買方證據；先當研究資產，不當本期商機。",
+      "action": "Watch｜用 30 分鐘寫 10 個台灣日常任務，每個只定義成功證據、不可逆步驟與人工接管點；先拿 2 個在 ChatGPT Agent 實跑，記錄不是『答對』而是『完成／未完成／為何停下』。",
+      "score": "關聯 5/5｜新能力 4/5｜商機 4/5"
+    },
+    {
+      "id": "2026-11-03-agibot-convenience-store",
+      "title": "3｜六台人形機器人剛跑完 24 小時便利店直播：場景是真的，替代勞力的證據還不夠",
+      "url": "https://www.agibot.com.cn/article/315/detail/250.html",
+      "source": "AGIBOT / Humanoids Daily / EqualOcean",
+      "publishedAt": "2026-11-03",
+      "category": "Watch",
+      "summary": "智元讓六台 G2 在上海真實營業的便利店，從 11 月 2 日 10:00 到 3 日 10:00 經歷午晚高峰、深夜與早餐班，負責迎賓、取送／補貨、咖啡、熟食與清潔。4.5 小時進度報告稱完成 337 項活動：116 次迎賓、84 件取送、30 杯咖啡、40 次早餐服務、27 次補貨巡檢、40 次清潔。直播比剪輯 demo 更有價值，也展示多機調度與錯誤恢復；但截至本期截稿仍沒有總嘗試數、失敗率、人工介入、停機／充電、等價工時或成本，『24 小時活動』不等於六台都全自主連續工作。",
+      "whyItMatters": "ChatGPT＋Codex 無法在實體店持續感知、抓取、避人、恢復失手並跨機分工；這確實跨到新的工作表面。可是對你而言，現在最有價值的不是買機器人，而是學會拒絕沒有分母的 physical-AI KPI：活動數不能回答可靠度與商業回收期。",
+      "opportunity": "台灣超商痛點真實，但六台通用人形機器人加現場支援是否比單用途補貨設備便宜，完全沒有證據。可研究 intervention logging 與 task-level reliability dashboard；沒有 design partner、原始紀錄與採購成本前，不做產品。",
+      "action": "Watch｜暫不試用。只在智元公開完整 24 小時的 task attempts、成功率、人工介入分鐘、downtime／充電與人類基準後，花 20 分鐘換算每有效工時成本；缺任一分母就不把它當勞力替代案例。",
+      "score": "關聯 4/5｜新能力 5/5｜商機 3/5"
+    },
+    {
+      "id": "2026-11-03-foxconn-dsx-pod",
+      "title": "4｜鴻海把 NVIDIA Vera Rubin AI factory 裝進貨櫃：部署期官方稱可從半年壓到最快 14 天",
+      "url": "https://www.honhai.com/zh-tw/press-center/press-releases/latest-news/2136",
+      "source": "Foxconn / NVIDIA",
+      "publishedAt": "2026-10-30",
+      "category": "Watch",
+      "summary": "鴻海在 HHTD26 展示 NVIDIA DSX POD 參考設計：把 Vera Rubin AI factory 的機櫃、纜線、管路與功能驗證預先整合進模組化貨櫃，到場後接上已備妥的電力、散熱與網路。鴻海官方稱可把部署從六個月縮短到最快 14 天。這不是新的模型，而是 AI 算力從客製 data-center 工程轉成預製產品；目前是官方展示與參考設計，沒有公開客戶的 14 天交付、總成本或運轉數據。",
+      "whyItMatters": "它不會改善你今天的 Codex，但代表台灣供應鏈正在把 frontier compute 的建置速度產品化。當模型訓練與企業私有推論的瓶頸從 GPU 轉向電力、冷卻與施工，能預整合並驗證整座 AI factory 的廠商會取得新的分發與服務面。對個人開發者應理解產業位移，而不是購買硬體。",
+      "opportunity": "solo engineer 不該碰貨櫃機房；較近的軟體面是交付驗收、能耗／散熱 telemetry 與 Agent 安全控制，但需要設備資料和企業客戶，這輪沒有可行的最小 MVP 路徑。",
+      "action": "Watch｜不投入開發。若你的 NYCU 或產業合作碰到 on-prem AI，只用 20 分鐘把需求拆成算力、電力、冷卻、上線時間、資料主權五欄，確認真正瓶頸是否已從模型轉成部署工程。",
+      "score": "關聯 3/5｜新能力 4/5｜商機 3/5"
+    },
+    {
+      "id": "2026-11-03-ai-training-preference-signal",
+      "title": "5｜網站只寫一條 robots.txt 就能向多家 AI 表達訓練偏好；OpenAI 承諾採用，但現在先別部署",
+      "url": "https://openai.com/index/helping-websites-express-ai-training-preferences/",
+      "source": "OpenAI / IETF Internet-Draft",
+      "publishedAt": "2026-10-30",
+      "category": "Watch",
+      "summary": "OpenAI 宣布未來數月會遵守共同的 robots.txt policy token，讓網站用 `User-Agent: __usage_ai-training` 搭配 Allow／Disallow，按路徑表達是否允許內容用於生成式 AI 訓練，而不必替每家供應商維護 crawler 規則。它和爬取權限彼此獨立，私人協議仍可能覆蓋偏好。關鍵限制是：目前文件只是 2026 年 10 月 30 日提交的個人 Internet-Draft v00，IETF 明載未獲背書、沒有正式標準地位；OpenAI 也尚未完成實作。",
+      "whyItMatters": "你經營多個公開網站與內容型 repo，這比另一個小模型更可能影響實際治理：同一站可允許 press kit 訓練、拒絕付費內容訓練，同時保留搜尋爬取。但它只是偏好訊號，不是技術存取控制、授權合約或保證刪除既有訓練資料，現在部署可能帶來錯誤安全感。",
+      "opportunity": "未來可做多站點政策稽核與 robots.txt 產生器，但語法極小、標準未定且瀏覽器／模型供應商採用度未知，不足以形成付費產品。對你自己的站，先盤點內容層級比寫工具有價值。",
+      "action": "Watch｜現在不要改正式 robots.txt。花 15 分鐘把你的網站分成『可訓練／不可訓練／需個別授權』三類；等 OpenAI 公布正式實作、至少另一家 provider 採用且草案版本穩定後，再一次部署並驗證。",
+      "score": "關聯 4/5｜新能力 3/5｜商機 2/5"
+    },
+    {
+      "id": "2026-11-03-opportunity",
+      "title": "本期商機｜沒有夠強的 Opportunity of the Briefing：台灣生活 Agent eval 有研究價值，還沒有產品證據",
+      "url": "https://openai.com/index/lifeval/",
+      "source": "Editorial decision",
+      "publishedAt": "2026-11-03",
+      "category": "商機",
+      "summary": "最可信的缺口是繁中／台灣日常 Agent 評測：目標使用者可能是做 browser／computer-use Agent 的模型商與企業；痛點是美國生活任務無法覆蓋台灣政府、健保、交通、學校、超商與 LINE 流程；最小研究版可做 30 個任務，記錄成功證據、不可逆動作、人工接管與網站變動；分發可從 NYCU 開放 benchmark 與技術文章開始，未來才可能靠企業私有 eval／驗收顧問收費。",
+      "whyItMatters": "這條路和你的 eval reliability、selective routing 與教育場景高度一致，也不需要先訓練模型。但證據缺口同樣清楚：LifeVal 未公開完整方法，台灣 Agent 團隊是否願意付費未知，網站流程維護成本高，且自動操作政府／金融服務涉及授權與個資風險。",
+      "opportunity": "判定：No strong opportunity this cycle。可做一個 10-task 研究 spike 驗證方法與維護成本，但不應承諾產品、收費或大規模資料蒐集；只有在兩個外部團隊願意提供任務並使用結果後，才升級為 MVP。",
+      "action": "不啟動產品｜若要延伸研究，只做 10-task、一天內可停止的 spike；先取得任務使用權，所有不可逆動作使用 sandbox 或停在確認前，並記錄每個任務的維護時間。",
+      "score": "關聯 5/5｜新能力 3/5｜商機 3/5"
+    },
+    {
+      "id": "2026-11-03-watchlist",
+      "title": "觀察清單｜OpenAI 電網調度、Apple Intelligence 中國版傳聞與智元最終成績都要等實證",
+      "url": "https://openai.com/index/grid-protectors-program/",
+      "source": "OpenAI / Apple / AGIBOT",
+      "publishedAt": "2026-11-03",
+      "category": "Watchlist",
+      "summary": "OpenAI 11 月 2 日宣布 Grid Protectors Program，規劃讓未來算力園區在電網吃緊時降低需求，Georgia Effingham 校區仍在開發，沒有實際削峰結果；這是 AI 基建與電網整合的重要方向，但不是現在可用產品。Apple Intelligence 中國版搭配 Qwen 的流傳消息未獲 Apple 官方支持：Apple 支援頁仍寫中國大陸購買的支援裝置目前無法使用，WWDC26 官方也稱新功能在處理監管要求期間不會進入中國，因此不升榜。智元 24 小時便利店測試剛結束，等待完整介入、停機、失敗率與成本資料，而不是只看任務總數。",
+      "whyItMatters": "三則分別牽動算力的能源限制、十億級裝置分發與實體 Agent 商業化；每一則都可能成為大變化，也都缺少今天應該改工作流的證據。把傳聞、計畫與完成結果分開，可避免因大公司名字而高估可用性。",
+      "opportunity": "升榜條件：Grid Protectors 公開已簽署的可中斷容量與實際事件；Apple 正式公布中國區型號、日期與本地模型邊界；智元公開完整 24 小時的成功率、人工介入、停機與人類成本基準。",
+      "action": "Watch｜不新增工具。下一輪只檢查上述三組觸發證據；若仍只有公告、傳聞或沒有分母的活動數，繼續留在 watchlist。",
+      "score": "關聯 3/5｜新能力 4/5｜商機 2/5"
+    }
+  ]
+}
