@@ -1,0 +1,110 @@
+{
+  "generatedAt": "2026-11-10T01:57:58Z",
+  "timezone": "Asia/Taipei",
+  "items": [
+    {
+      "id": "2026-11-10-executive-summary",
+      "title": "30 秒摘要｜AI Agent 同時往兩端分化：千 Agent 連跑八天造出作業系統，日常小步驟則降到每百萬 token US$0.10",
+      "url": "https://www.anthropic.com/claude-fable-and-mythos-5-2",
+      "source": "Anthropic / Meta / ByteDance / Vercel / Google",
+      "publishedAt": "2026-11-10",
+      "category": "摘要",
+      "summary": "11 月 6–10 日真正的主線是模型開始分工。Anthropic 的 Fable 5.2 讓約 1,000 個子 Agent 連續八天從空資料夾造出可在筆電開機的作業系統，也在 30 小時內完成 Fermat 最後定理的 Lean 形式化；這是本期最大能力跳躍，但案例仍是供應商單次實驗。另一端，Meta Muse Ember 以 input／output 每百萬 token US$0.10／US$0.50，主攻 routing、抽取與工具呼叫。ByteDance Seedream 5.5 則把未修改區域的像素級保留、百輪編修與原生 RGBA 透明素材帶進影像工作流。Vercel 的十月實際流量顯示 decision models 已占 26% 請求、估計花費僅 0.53%；Google 同時用 TPU 8i Max 與 8tx 分別解長脈絡資料搬運與機密推論。",
+      "whyItMatters": "你已有 ChatGPT Plus＋Codex＋Google Pro，不需要再換一個日常聊天介面。值得動手的只有三件事：拿一個真實大型 migration 測 Fable 5.2 是否超過 Codex；用 Muse Ember 承接 Reaper-C／HugAgent 的高頻可驗收小任務；用 Seedream 5.5 和 Images 2.6 對打多輪修圖與透明素材。後兩則則證明你的 selective routing 方向不是論文自嗨，而是生產流量與硬體設計都在往任務分工靠攏。",
+      "opportunity": "本期沒有足夠強的 Opportunity of the Briefing。最接近的是繁中 Agent 路由與驗收層，但 Vercel 已提供 gateway，模型商也在快速下探成本；沒有兩個外部團隊願意付費提供任務與失敗紀錄前，不把研究缺口包成 SaaS。",
+      "action": "用 60 分鐘做一個三路測試：同一個跨檔 migration 交給 Codex 與 Fable 5.2；其中五個可獨立驗收的小步驟再交給 Muse Ember。只記錄成功率、人工介入、總延遲與整體成本，不用單一 benchmark 決定預設模型。",
+      "score": "關聯 5/5｜新能力 5/5｜商機 4/5"
+    },
+    {
+      "id": "2026-11-10-claude-fable-5-2",
+      "title": "1｜最大能力跳躍：Claude Fable 5.2 讓千 Agent 連跑八天造出可開機作業系統，並完成真實硬體設計",
+      "url": "https://www.anthropic.com/claude-fable-and-mythos-5-2",
+      "source": "Anthropic",
+      "publishedAt": "2026-11-09",
+      "category": "Try now",
+      "summary": "Anthropic 11 月 9 日發布 Claude Fable 5.2 與受審查的 Mythos 5.2。Fable 公開給所有平台，API 為每百萬 input US$8、output US$40，官方稱輸出快 30%，另有 2.5 倍速度的 fast mode。最強案例不是 benchmark：一名工程師只給一段要求，模型協調逾 1,000 個子 Agent，連續八天從空資料夾做出可在筆電開機、含核心、驅動、檔案系統、視窗、登入與安裝程式的原型 OS；另一組 1,000 Agent 在 30 小時內把 Fermat 最後定理完整形式化為 Lean。它也自行選零件、畫四層 PCB、建 CAD 外殼與寫軟體，三個電子裝置實際製造後都無需修改電路即可運作。以上皆是 Anthropic 與合作方的展示，尚非多次獨立重現。",
+      "whyItMatters": "Codex 已很會做 repo 任務，但 Fable 5.2 展示的是「把巨型目標拆成上千條平行軌跡、跨天協調、最後整合成可驗證實物」。這跨過單一 coding Agent 的範圍，也直接對上你的 HugAgent graph、Agent coordination 與長時間自主研究；如果真實 repo 能重現，才值得新增 Claude API，而不是因為宣傳稿換聊天訂閱。",
+      "opportunity": "長時間 migration、形式化驗證與硬體協同都有高價值買方，但 1,000 Agent 的 token、工具與 review 成本沒有完整公開。對 solo engineer 最合理的是做 orchestration／verification 研究，不是轉售 Fable wrapper。",
+      "action": "Try now｜花 60 分鐘選一個你原本會交給 Codex 的跨 10+ 檔 migration，固定測試與驗收條件，分別跑 Codex 和 Fable 5.2；若 Fable 沒有在一次通過率或人工修正上明顯領先，就不新增常態工具成本。",
+      "score": "關聯 5/5｜新能力 5/5｜商機 4/5"
+    },
+    {
+      "id": "2026-11-10-meta-muse-ember",
+      "title": "2｜Meta Muse Ember 把 Agent 的 routing、抽取與工具小步驟壓到 US$0.10／US$0.50，適合當便宜執行層",
+      "url": "https://research.meta.ai/blog/muse-ember",
+      "source": "Meta AI Research",
+      "publishedAt": "2026-11-09",
+      "category": "Try now",
+      "summary": "Meta 11 月 9 日推出 Muse Ember，專門處理 Agent 反覆執行的 tool calls、coding subtasks、routing、extraction 與長文件解析。它有 1M context、最高 512K output，支援 Responses API，在 Meta Model API 與 Muse Code 已可用；每百萬 input US$0.10、cached input US$0.004、output US$0.50。官方 Artificial Analysis 指標顯示它以約三分之一成本匹配 Haiku 5.5 最佳總分，且擊敗 Luna 各 reasoning setting；但在某些較複雜 coding 評測仍落後 Haiku，不能當成全能替代品。",
+      "whyItMatters": "它不會取代 Codex 解最難的工程問題，真正價值是把昂貴模型前後的高頻小步驟拆出去：分類研究假設、從回測報告抽欄位、決定下一個工具、檢查格式或讀長文件。這和你 Reaper-C 每五小時迭代、selective routing 與 HugAgent 圖推理高度吻合；以前為了省錢換小模型常會犧牲上下文，Ember 把 1M context 與極低價格放在一起。",
+      "opportunity": "可做的不是另一個 gateway，而是累積「哪些子任務可以安全降級」的可重現資料：錯誤類型、fallback 門檻與總任務成本。這會成為你的 routing 論文與自主研究工廠的資產，但還不是獨立產品。",
+      "action": "Try now｜花 45 分鐘從 Reaper-C 或 HugAgent 取 20 個已有答案的小任務，讓 Ember 做 route／extract／tool-choice，和目前模型比較正確率、延遲、fallback 次數與每個成功任務成本；只把零風險且可驗收的類型降級。",
+      "score": "關聯 5/5｜新能力 4/5｜商機 4/5"
+    },
+    {
+      "id": "2026-11-10-bytedance-seedream-5-5",
+      "title": "3｜Seedream 5.5 主打百輪修圖與原生 RGBA：直接挑戰 Images 2.6 的多輪一致性與素材交付",
+      "url": "https://seed.bytedance.com/en/blog/more-realistic-images-more-stable-editing-across-100-rounds-introducing-seedream-5-5",
+      "source": "ByteDance Seed",
+      "publishedAt": "2026-11-09",
+      "category": "Try now",
+      "summary": "ByteDance Seed 11 月 9 日發布 Seedream 5.5。三項核心更新是：未修改區域的像素級保留並展示同一人物連續 100 輪編修；直接輸出帶完整／半透明 alpha channel 的 RGBA 素材；改善真實材質與密集小字。官方中英文測試宣稱嚴重文字錯誤率 0.4%、輕微錯誤率 1.7%，並稱在文字結構與文生圖真實感領先 GPT Image 2.5 Sunburst、Nano Banana 2.1；這些仍是原廠評測。官方頁可進 Dola 與 BytePlus Playground，Dreamina、CapCut、BytePlus 的區域與方案開放度需個別確認。",
+      "whyItMatters": "你上輪才拿到 Images 2.6 的 GIF／SVG／局部編修；Seedream 5.5 提出的差異不是單張更漂亮，而是「已確認區域不要再漂」和「直接交透明素材」。這對 relou 宣傳圖、迷因、Paper English 圖卡與角色資產比一般生圖 benchmark 更實際，也正好能用同一素材公平對打。",
+      "opportunity": "透明素材與穩定修稿能降低設計返工，但模型即將進多個大平台，做 wrapper 沒有護城河。價值在繁中校對、品牌一致性驗收與可重用素材庫；是否能收費要先看真實交付節省的分鐘數。",
+      "action": "Try now｜花 30 分鐘拿上輪 Images 2.6 的同一張 relou 素材，連改五次人物服裝／背景／小物，再輸出透明角色；用像素差、繁中逐字、深淺背景白邊與總返工分鐘比較，不用官方百輪展示下結論。",
+      "score": "關聯 5/5｜新能力 4/5｜商機 3/5"
+    },
+    {
+      "id": "2026-11-10-vercel-ai-gateway-index",
+      "title": "4｜真實生產流量驗證模型分工：decision models 占 26% 請求，估計花費只占 0.53%",
+      "url": "https://vercel.com/ai-gateway/production-index",
+      "source": "Vercel AI Gateway Production Index",
+      "publishedAt": "2026-11-09",
+      "category": "Watch",
+      "summary": "Vercel 11 月 9 日發布十月 AI Gateway 匿名彙整資料；平台每月處理逾 100 兆 tokens。Decision models 在九月中上架後，十月已占所有請求 26%，估計花費卻只占 0.53%；近三分之一付費團隊用過它們，在每月逾 100 億 tokens 的團隊中約七成採用。花費最高 1% 團隊使用模型數的中位數為 29；超過一半語言模型請求流向上架未滿 60 天的版本。限制是這只是偏好多供應商的 Vercel 樣本，花費按公開牌價估算，且 decision 流量高度集中於單一模型，不能當全市場市占。",
+      "whyItMatters": "這是少見的生產資料，直接支持你的 selective routing 題目：高頻「決定下一步」不需要每次叫 frontier model，而且成本差距足以改變 Agent 架構。更重要的是，它也顯示模型更換極快；研究價值不在找永遠最強的模型，而在 shift 下仍能校準、拒答與 fallback 的路由器。",
+      "opportunity": "可服務的痛點是多模型團隊缺乏 task-level 成功率與總成本紀錄，但 Vercel 已有 gateway，市場不缺轉送層。只有把 non-stationary eval、失敗成本與可審核 fallback 做成明顯差異，才可能形成產品。",
+      "action": "Watch｜花 30 分鐘把 Reaper-C 或 skill-probe 的 Agent graph 分成「決策／生成／工具執行／驗證」四類，挑一個有固定答案的 decision 節點先接 Ember；至少 50 次結果再決定是否路由，不能把 26% 直接套成自己的比例。",
+      "score": "關聯 5/5｜新能力 3/5｜商機 4/5"
+    },
+    {
+      "id": "2026-11-10-google-tpu-8tx-8i-max",
+      "title": "5｜Google 把 Agent 算力拆成兩條：TPU 8i Max 解長脈絡記憶體牆，8tx 專做機密推論",
+      "url": "https://blog.google/innovation-and-ai/infrastructure-and-cloud/global-network/tpu-8i-max-and-8tx/",
+      "source": "Google",
+      "publishedAt": "2026-11-09",
+      "category": "Watch",
+      "summary": "Google 11 月 9 日擴充第八代 TPU 系統。8i Max 把兩顆 8i 放入同一封裝，相較 8i 提供兩倍計算、兩倍 SRAM 與兩倍 HBM 頻寬，目標是降低整個 repo、多段影片與長 Agent 軌跡的資料搬運瓶頸。8tx 則基於 8t、第五代 AMD EPYC 主機與低延遲網路，將模型權重與敏感資料在使用中隔離，面向受監管推論、小型私有資料訓練與 distillation；官方稱延遲最高可較 8t 降至一半、安全功能效能損失接近零，但尚無足以重現各工作負載的完整數據、價格與普遍供應資訊。",
+      "whyItMatters": "它不會讓你今天的 Codex 更快，卻揭示 Agent infrastructure 的兩個真正瓶頸：長脈絡不是只看 context window，還受記憶體頻寬限制；私有模型也不只加密硬碟，必須保護運算中的資料與權重。這對台灣 AI 供應鏈、校園研究資料與未來企業部署是重大系統分化。",
+      "opportunity": "solo engineer 不應做 TPU 基礎設施。較近的軟體面是 workload profiling、資料邊界與 confidential-compute 驗收，但需要企業客戶與硬體存取；本輪沒有可行 MVP。",
+      "action": "Watch｜不申請、不換架構。只有當你的研究或產品必須處理校園／學生敏感資料或超長多媒體脈絡時，才花 20 分鐘把瓶頸分成容量、頻寬、延遲與信任邊界；先證明問題再談硬體。",
+      "score": "關聯 3/5｜新能力 4/5｜商機 3/5"
+    },
+    {
+      "id": "2026-11-10-opportunity",
+      "title": "本期商機｜沒有夠強的 Opportunity of the Briefing：路由層有需求，但 gateway 已成熟、付費差異仍未證明",
+      "url": "https://vercel.com/ai-gateway/production-index",
+      "source": "Editorial decision",
+      "publishedAt": "2026-11-10",
+      "category": "商機",
+      "summary": "最接近的機會是「繁中／台灣 Agent 的可校準 selective routing」：目標客群是已有多模型成本的 Agent 團隊；痛點是新模型更換快、成功率隨資料 shift 漂移、一次失敗可能抵消單價節省；最小 MVP 可只做 3 種可驗收任務、保留拒答與 frontier fallback；分發可從 NYCU benchmark、Reaper-C 技術文章與開源 evaluator 開始；未來按評測套件或企業私有校準收費。關鍵風險是 Vercel 等 gateway 已處理模型轉送，買方是否願為可靠度層另外付費仍沒有證據。",
+      "whyItMatters": "Muse Ember 與 Vercel 生產資料讓研究假設更可信，但「研究方向成立」不等於「產品有人買」。你應先用自己的 Reaper-C、HugAgent、skill-probe 產生真實失敗與成本曲線，再找外部團隊驗證，而不是先造一個通用 dashboard。",
+      "opportunity": "判定：No strong opportunity this cycle。只有在兩個外部 Agent 團隊願意交出匿名 task traces，且你的 router 在 shift 後同時降低 30% 以上成本、維持成功率與可回退，才升級為付費 MVP。",
+      "action": "不啟動產品｜先做 50-task 內部實驗，保存 task type、模型、置信度、拒答、fallback、最終成功與總成本；沒有穩定優勢就把結果留在論文，不做 SaaS。",
+      "score": "關聯 5/5｜新能力 3/5｜商機 4/5"
+    },
+    {
+      "id": "2026-11-10-watchlist",
+      "title": "觀察清單｜Gemini Omni 1.2 Flash、After Effects 2027 與 Muse Voice 都有用，但本輪沒有 Wild Card",
+      "url": "https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemini-omni-1-2-flash/",
+      "source": "Google / Adobe / Meta",
+      "publishedAt": "2026-11-10",
+      "category": "Watchlist",
+      "summary": "Gemini Omni 1.2 Flash 11 月 5 日已把 15 秒原生影片、多輪對話編修與參考圖／動作／音訊一致性帶到 API，720p 每秒 US$0.07，但發布時間早於本輪窗口、也應等你有真影片任務再測。After Effects 2027 於 11 月 7 日分階段推出，AI Assistant 能整理專案、寫 expression、生成素材與建立 composition；核心能力其實 9 月已進 public beta，這次沒有足夠新證據升榜。Meta Muse Voice 從 11 月 6 日在美國推出語音與表情 avatar，但相較現有 ChatGPT voice，主要是介面與地區 rollout，沒有值得你新增工具的能力。這輪沒有 exceptional Wild Card。",
+      "whyItMatters": "三者分別代表低價長影片、專業創意 GUI Agent 與能邊說邊在背景工作的個人 Agent；方向重要，但不是你今天該中斷 coding／研究去安裝的工具。用明確升榜條件避免把產品 rollout 當能力突破。",
+      "opportunity": "升榜條件：Omni 1.2 在你的品牌素材上通過人物、文字與音訊一致性；After Effects Assistant 公開可重現的跨 composition 成功率；Muse Voice 進台灣且能完成跨 App 背景任務，而不只是對話。",
+      "action": "Watch｜不新增工具。下一輪只檢查上述可操作性與地區開放；若仍是供應商 demo、舊 beta GA 或美國限定，就留在清單。",
+      "score": "關聯 3/5｜新能力 4/5｜商機 2/5"
+    }
+  ]
+}
