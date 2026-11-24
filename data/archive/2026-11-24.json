@@ -59,7 +59,7 @@
       "title": "4｜Gemini 4 Neon 完整上線 Google Pro／Antigravity：一百萬 context、低價快取，成為 Codex Sol／Astra 的對照組",
       "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-neon/",
       "source": "Google",
-      "publishedAt": "2026-11-18（11 月 23 日更新可用範圍）",
+      "publishedAt": "2026-11-18",
       "category": "Try now",
       "summary": "Google 原始發布日為 11 月 18 日，11 月 23 日更新並確認 Neon 已在 Gemini API／AI Studio、Gemini for business、Antigravity，以及 Pro／Ultra 的 Gemini app 推出。模型有 100 萬 token context，API 每百萬 input／cached input／output 為 US$3／0.15／15；定位介於長任務 Carbon 與快速 Hydrogen 之間。基準多為官方或合作評測，仍需自己的 repo 驗證。",
       "whyItMatters": "你同時有 Google Pro 與 ChatGPT Plus，Neon 不需再付一次錢，終於能用真實任務對打 Codex Sol／Astra。100 萬 context 與 95% cached-input 折扣特別適合反覆讀同一批 HugAgent profile、論文與 repo。",
