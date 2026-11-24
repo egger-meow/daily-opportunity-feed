@@ -1,0 +1,123 @@
+{
+  "generatedAt": "2026-11-24T01:09:42Z",
+  "timezone": "Asia/Taipei",
+  "items": [
+    {
+      "id": "2026-11-24-executive-summary",
+      "title": "30 秒摘要｜AI 的主戰場從『更強模型』移到『持續記住、協作與產出可交付物』",
+      "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes",
+      "source": "OpenAI / Google / Z.ai",
+      "publishedAt": "2026-11-24",
+      "category": "摘要",
+      "summary": "11 月 20–24 日最值得注意的不是又多一個聊天機器人。ChatGPT Space 開始向全球 Plus 推出，可建立多人共同編輯、由連接 App 自動更新的頁面與簡報；11 月 23 日 GPT-6.2 也進入一般 Chat。Google 把 Wallet、Drive 與 Gemini 對話帶進 Search Personal Intelligence，並更新 Gemini 4 Neon 的正式可用範圍。Z.ai 的 GLM-5.4 則用 Loop Transformer 探索不增加參數、重複計算既有層的路線。",
+      "whyItMatters": "你已有 ChatGPT Plus＋Codex＋Google Pro，本期該重新分工：一般問答先用 ChatGPT GPT-6.2；長時間 coding 與專業交付仍交給 Codex Sol／Astra；跨週研究、簡報與專案狀態搬進 Space。Google Personal Intelligence 與 Neon 值得做同任務對照，但重點是能否少補背景、少人工整理，不是追 benchmark。",
+      "opportunity": "沒有足夠證據支持新的獨立產品。最可信的訊號是『有來源、會自動更新的垂直工作空間』；先用 HugAgent、skill-probe 或家教進度做內部模板，只有外部使用者連續使用並願意付費才產品化。",
+      "action": "用 60 分鐘建立一個 HugAgent Space：放入研究設計、54 人資料說明與每週簡報，定義一個會自動更新的進度頁；再用 GPT-6.2 Chat 與 Codex Sol 各處理同一個新問題，確認三種工作表面的分工。",
+      "score": "關聯 5/5｜新能力 5/5｜商機 3/5"
+    },
+    {
+      "id": "2026-11-24-chatgpt-space-plus",
+      "title": "1｜最大能力跳躍：ChatGPT Space 進入 Plus，把一次性對話變成可共同編輯、會自動更新的頁面與簡報",
+      "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes",
+      "source": "OpenAI",
+      "publishedAt": "2026-11-20",
+      "category": "Try now",
+      "summary": "OpenAI 11 月 20 日開始向全球 18 歲以上 Plus 使用者推出 Space。它能建立互動頁面與簡報、邀請其他有 Space 權限的人共同編輯，並根據連接的 App 與工具自動更新；留言可直接 @ChatGPT 修改，也能邀請 dot 協作。限制是 Free 使用者不能開啟，且目前沒有公開連結。",
+      "whyItMatters": "你現在的 ChatGPT＋Codex 很會回答與改 repo，但 HugAgent、skill-probe、Reaper-C 的決策、實驗與簡報仍散落。Space 補上持久、多人、可更新的交付層，而且不需新增訂閱。",
+      "opportunity": "可先把研究週報、實驗狀態與家教進度做成模板。若能讓教授、學生或家長每週少花 30 分鐘整理，才有代建或垂直產品可能；沒有公開分享前不適合當教育產品前台。",
+      "action": "Try now｜花 45 分鐘建一個 HugAgent 研究 Space：研究問題、54 人資料／實驗矩陣與 W8 簡報各一頁，只測來源追溯、留言修改、自動更新是否破壞人工結構。",
+      "score": "關聯 5/5｜新能力 5/5｜商機 4/5"
+    },
+    {
+      "id": "2026-11-24-gpt-6-2-chat",
+      "title": "2｜GPT-6.2 正式進一般 Chat：Plus 不再只在 Codex／Work 用到 6.2，圖片、複雜指令與網路研究同步升級",
+      "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes",
+      "source": "OpenAI",
+      "publishedAt": "2026-11-23",
+      "category": "Try now",
+      "summary": "OpenAI 11 月 23 日開始把針對 Chat 調整的 GPT-6.2 全球推出到 Plus、Pro、Business 與 Enterprise。官方內部測試中，圖片理解由 GPT-6 的 47.4% 升至 71.7%，困難指令遵循由 62.5% 升至 78.1%；BrowseComp 內部版在 Extra high 高約 10 個百分點。Plus／Pro 由 GPT-6.2 Sol 驅動，Work 與 Codex 模型不變。",
+      "whyItMatters": "上一期 6.2 只改變 Codex／Work；這次連每天問問題、看截圖與查網路的入口都換代。它不取代 Codex 的 repo 操作或 Astra 的長任務，但可縮短『先問 Chat、再搬去 Codex』的前置整理。",
+      "opportunity": "沒有 wrapper 商機。可建立真實 task routing：看圖、查資料、釐清需求用 Chat 6.2；改檔、跑測試、長時間研究進 Codex；高代價交付再升 Astra，也可成為 selective routing 論文的異質成本資料。",
+      "action": "Try now｜花 30 分鐘重跑三個曾看錯的任務：HugAgent graph、GPU／終端截圖與多來源查證；只記錄正確率、追問次數與是否仍需轉 Codex。",
+      "score": "關聯 5/5｜新能力 4/5｜商機 3/5"
+    },
+    {
+      "id": "2026-11-24-google-personal-intelligence",
+      "title": "3｜Google Search 開始讀 Wallet、Drive 與 Gemini 對話：個人化搜尋跨到文件、花費與跨對話記憶",
+      "url": "https://blog.google/products-and-platforms/products/search/google-search-personal-intelligence-apps/",
+      "source": "Google",
+      "publishedAt": "2026-11-23",
+      "category": "Watch",
+      "summary": "Google 11 月 23 日宣布 Search AI Mode 的 Personal Intelligence 開始加入 Google Wallet，Drive 與 Gemini app 將在未來數週接上，與 Gmail、Calendar、Photos、Search history 共同提供個人化回答。Wallet 只能讀取、不能移動或投資資金；Drive 能整合文件、試算表與 PDF；Gemini 與 Search 可延續彼此的研究背景。所有連接需 opt-in，並可逐一關閉。",
+      "whyItMatters": "Google 擁有你已使用的 Search、Drive、Calendar、Gmail 與 Wallet 原生資料。真正差距不是回答更聰明，而是不用每次重貼文件、行程與研究背景；若台灣帳號完整開放，它會是 Google Pro 最實際的續訂理由之一。",
+      "opportunity": "底層個人助理難與 Google 競爭。較合理的是把 skill-probe、家教或研究資料整理成可撤銷授權、具明確 schema 的來源；但尚無台灣使用者付費證據。",
+      "action": "Watch｜花 15 分鐘檢查 Search Personalization 是否已有 Connected Apps；若有，只連一個非敏感 Drive 測試資料夾，確認引用範圍與關閉後行為，再決定是否接 Wallet。",
+      "score": "關聯 5/5｜新能力 4/5｜商機 3/5"
+    },
+    {
+      "id": "2026-11-24-gemini-4-neon",
+      "title": "4｜Gemini 4 Neon 完整上線 Google Pro／Antigravity：一百萬 context、低價快取，成為 Codex Sol／Astra 的對照組",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-neon/",
+      "source": "Google",
+      "publishedAt": "2026-11-18（11 月 23 日更新可用範圍）",
+      "category": "Try now",
+      "summary": "Google 原始發布日為 11 月 18 日，11 月 23 日更新並確認 Neon 已在 Gemini API／AI Studio、Gemini for business、Antigravity，以及 Pro／Ultra 的 Gemini app 推出。模型有 100 萬 token context，API 每百萬 input／cached input／output 為 US$3／0.15／15；定位介於長任務 Carbon 與快速 Hydrogen 之間。基準多為官方或合作評測，仍需自己的 repo 驗證。",
+      "whyItMatters": "你同時有 Google Pro 與 ChatGPT Plus，Neon 不需再付一次錢，終於能用真實任務對打 Codex Sol／Astra。100 萬 context 與 95% cached-input 折扣特別適合反覆讀同一批 HugAgent profile、論文與 repo。",
+      "opportunity": "可研究『大而固定的個體資料＋反覆小查詢』是否因快取變便宜，正好對應 HugAgent 54 人 profile、graph 與跨 session 評測；前提是量到長 context 遺漏、cache hit 與總成本。",
+      "action": "Try now｜花 45 分鐘把同一位 HugAgent 的 raw profile、graph 與 task 丟給 Neon 和 Codex Sol，連續追問五次，記錄 persona consistency、遺漏、修正服從與成本。",
+      "score": "關聯 5/5｜新能力 4/5｜商機 4/5"
+    },
+    {
+      "id": "2026-11-24-hebbia-astra-case",
+      "title": "5｜金融研究從 2,000 份文件到可交付簡報：Hebbia 公開『來源覆蓋＋引用＋版型』的量化驗收",
+      "url": "https://openai.com/business/customer-stories/hebbia/",
+      "source": "OpenAI / Hebbia",
+      "publishedAt": "2026-11-20",
+      "category": "Try now",
+      "summary": "Hebbia 11 月 20 日公布 GPT-6 Astra 測試：必要來源類型覆蓋比最佳替代模型高 13.6 個百分點，引用片段相關率 99.5%；簡報要求符合率 97.9%，領先 14.4 個百分點。流程把資料室、同業申報與新聞組成有引用的分析，再輸出符合客戶模板的原生 PowerPoint。測試用 2026 年 8–9 月 prerelease build，且由供應商公布，並非獨立 benchmark。",
+      "whyItMatters": "值得抄的不是『Astra 很強』，而是把高價知識工作拆成三個驗收目標：來源是否找齊、引用是否支持結論、成品是否符合模板。這比一般 RAG accuracy 更接近 HugAgent 報告、skill-probe 診斷與研究工具的成功條件。",
+      "opportunity": "窄機會是替研究室或家教建立 evidence-to-deliverable pipeline，讓來源、結論、圖表與投影片一一可追溯。目標使用者明確，但尚無外部付費證據；先當內部 evaluator。",
+      "action": "Try now｜花 45 分鐘替下一次 HugAgent 報告寫 10 條驗收規準：至少 3 種來源、每個數字能回到原文、每頁一題、版型與術語一致；讓 Astra 生成一版並逐條打分。",
+      "score": "關聯 5/5｜新能力 3/5｜商機 4/5"
+    },
+    {
+      "id": "2026-11-24-glm-5-4",
+      "title": "6｜Wild Card：GLM-5.4 用 Loop Transformer 重複跑既有層，以『更多計算深度』取代一味堆參數",
+      "url": "https://z.ai/blog/glm-5.4",
+      "source": "Z.ai",
+      "publishedAt": "2026-11-23",
+      "category": "Watch",
+      "summary": "Z.ai 11 月 23 日推出 GLM-5.4，稱它是首個旗艦 Loop Transformer：重複使用 GLM-5 的既有層，增加推理深度而不增加參數，加入視覺能力，並展示影片、完整遊戲、3D shader 與 FreeCAD 六軸機械臂。現可在 GLM Coding Plan、ZCode 與 Z.ai Chat 使用；API 仍標示 coming soon，權重也要等安全強化後才開放。",
+      "whyItMatters": "若這條路成立，長任務能力可能不只靠更大模型，而是讓相同參數反覆計算；對本地模型、成本與 adaptive compute 有長期意義。但你已有 Codex 與 Neon，現在沒有 API、權重或你的任務實測，還不足以改工作流。",
+      "opportunity": "等 API／權重後，可研究 loop depth 是否成為 selective routing 的新維度；現在做 wrapper 沒有護城河。",
+      "action": "Watch｜不新增訂閱。等 API 價格、權重授權與可重現評測到齊，再比較固定參數下的延遲、成本與長任務成功率。",
+      "score": "關聯 3/5｜新能力 5/5｜商機 2/5"
+    },
+    {
+      "id": "2026-11-24-opportunity-verdict",
+      "title": "本期商機｜沒有夠強的新獨立產品；先驗證『有來源、會更新的垂直工作空間』是否真的省時間",
+      "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes",
+      "source": "Editorial decision",
+      "publishedAt": "2026-11-24",
+      "category": "商機",
+      "summary": "可信目標使用者是研究生／研究室、家教老師與需要週週交付的 solo builder；痛點是資料散落、背景反覆重講、引用與簡報靠人工拼接。最小 MVP 不是新平台，而是一個 Space 或 Drive 模板，加上固定 schema、來源引用、驗收規準與每週自動更新。分發先從 NYCU 研究室、家教個案或自己的 repo 開始；關鍵風險是平台快速內建、分享權限、敏感資料與自動更新破壞人工內容。",
+      "whyItMatters": "Space、Personal Intelligence 與 Hebbia 都指向同一件事：模型差距縮小，價值移到『拿到正確脈絡，產出能驗收的交付物，之後持續更新』。但目前只證明能力，不證明台灣小團隊會付費。",
+      "opportunity": "判定：No strong opportunity this cycle。門檻是至少 3 位外部使用者連續 4 週使用，平均每週省 30 分鐘以上，且願意付費維護；未達門檻前只做工作流資產。",
+      "action": "不開新 repo｜替 HugAgent 或家教做一個模板並連續用兩週，記錄更新時間、錯誤引用、人工修正與分享阻力；只有外部使用者主動要求複製時才訪談。",
+      "score": "關聯 5/5｜新能力 4/5｜商機 3/5"
+    },
+    {
+      "id": "2026-11-24-watchlist",
+      "title": "觀察清單｜Space 公開分享、Personal Intelligence 台灣 rollout、Neon 真實成本、GLM API／權重",
+      "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes",
+      "source": "OpenAI / Google / Z.ai",
+      "publishedAt": "2026-11-24",
+      "category": "Watchlist",
+      "summary": "四個升榜條件：Space 支援公開連結或 Free 閱讀；Google 明確向台灣帳號開放 Wallet／Drive／Gemini Personal Intelligence；Neon 在 HugAgent 長 context 測試中比 Sol／Astra 少 30% 以上成本且不降一致性；GLM-5.4 公開 API 價格、權重授權與可重現評測。Anthropic IPO、Meta AI for Science 活動與一般企業公告皆不足以改變你的工具或工作流，未列主榜。",
+      "whyItMatters": "這些是會改變工具選擇的明確條件；未達前不增加訂閱、不搬敏感資料、不開 wrapper。",
+      "opportunity": "若 Space 放寬分享且 Personal Intelligence 在台灣可用，垂直工作空間才值得重新評估；否則維持 repo／自有網站前台。",
+      "action": "Watch｜下一次只回報上述條件的實質變化，沒有變化就不重複報導。",
+      "score": "關聯 4/5｜新能力 3/5｜商機 3/5"
+    }
+  ]
+}
