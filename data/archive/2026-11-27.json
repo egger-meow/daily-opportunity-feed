@@ -1,0 +1,123 @@
+{
+  "generatedAt": "2026-11-27T01:08:39Z",
+  "timezone": "Asia/Taipei",
+  "items": [
+    {
+      "id": "2026-11-27-executive-summary",
+      "title": "30 秒摘要｜這三天真正的變化：AI 不只產生答案，開始自己改寫研究問題、驗證代理工作流，並守住跨素材的一致性",
+      "url": "https://sakana.ai/marlin-update-2/",
+      "source": "Sakana AI / Together AI / Luma / Uber / OpenAI / Google DeepMind",
+      "publishedAt": "2026-11-27",
+      "category": "摘要",
+      "summary": "11 月 24–27 日最強的三條線很一致：Sakana Marlin 把深度研究升級成會反覆改寫假設、查更多來源並自行檢查簡報的長任務代理；Together Hurdle 與 Uber 的百萬次 Skills 經驗，讓 Codex／Claude 工作流能被隔離重跑、設 guard、比較模型與量化成本；Luma 則把品牌與角色設定變成跨圖片、影片持續生效的來源。另有 Codex／Astra 從公開天文資料找到待驗證行星候選，以及 Gemini 4 代理用 Lean 形式驗證改寫量子演算法。",
+      "whyItMatters": "你已經不缺會聊天或會改碼的模型；本期值得加用的，是 ChatGPT Plus＋Codex 尚未原生完整覆蓋的三件事：數小時自動重構研究假設並交付 PowerPoint、以乾淨沙盒重複驗收 agent／skill、讓角色與品牌跨大量視覺素材不漂移。",
+      "opportunity": "沒有足夠證據支持新開一個獨立 SaaS。最可信的短期價值，是把 skill-probe 與 HugAgent 的 Codex 任務改成可重跑的 eval suite；它先是研究與開發基礎設施，不是產品。",
+      "action": "本週只做兩個 45 分鐘實驗：用 Hurdle 對 skill-probe 的一個真實任務跑 baseline／with-instructions；下載 Marlin 的公開樣本報告與簡報，拿你自己的研究驗收規準逐條打分。",
+      "score": "關聯 5/5｜新能力 5/5｜商機 4/5"
+    },
+    {
+      "id": "2026-11-27-sakana-marlin-2",
+      "title": "1｜最大能力跳躍：Sakana Marlin 2.0 會自己重寫研究問題、反覆驗證假設，最後輸出已檢查過的 PowerPoint",
+      "url": "https://sakana.ai/marlin-update-2/",
+      "source": "Sakana AI",
+      "publishedAt": "2026-11-26",
+      "category": "Try now",
+      "summary": "Sakana AI 11 月 26 日為 Marlin 加入 Twilight 2.0 與 Midnight 2.0。研究代理會依新證據重設問題與更新假設；官方稱 Twilight 比原 Sunlight 快逾一小時、引用約 3 倍來源，Midnight 引用約 7 倍來源並產出約 5 倍篇幅。三種模式都能輸出 PowerPoint；新的 slide agent 會先建故事線，再檢查渲染結果並修正，圖表與來源 URL 一起保留。新模式每次 300 credits，Sunlight 為 100。這些倍率是供應商自測，尚非獨立評測。",
+      "whyItMatters": "ChatGPT Deep Research 與 Codex 很適合你逐步指揮，但 Marlin 把『假設—蒐證—反證—報告—可上台簡報』包成更長、更自主的單次任務，直接對準 HugAgent 文獻調查與 seminar 交付。若樣本品質成立，它值得加一個工具，而不是取代 Codex。",
+      "opportunity": "研究室的 research-to-deck 流程有真痛點，但先不要賣 wrapper。可用你熟悉的 HugAgent／個人化圖推理題目，建立引用正確率、漏掉反例、圖表可讀性、口頭報告可用率四項驗收；若 Marlin 穩定勝過現有 Space＋Codex，再考慮研究室代建服務。",
+      "action": "Try now｜花 45–60 分鐘下載官方公開的 Midnight 樣本報告與簡報，不先付費；用你 W8 簡報的 10 條 rubric 打分。只有引用與投影片都過關，才買一次 credits 跑自己的題目。",
+      "score": "關聯 5/5｜新能力 5/5｜商機 4/5"
+    },
+    {
+      "id": "2026-11-27-together-hurdle",
+      "title": "2｜Codex／Claude 終於能像程式一樣做回歸測試：Hurdle 重跑真實任務、比較條件，還能攔危險 API",
+      "url": "https://www.together.ai/blog/introducing-hurdle-run-agent-evals-on-your-api-skills-and-docs",
+      "source": "Together AI",
+      "publishedAt": "2026-11-25",
+      "category": "Try now",
+      "summary": "Together AI 11 月 25 日開源 Hurdle。它可讓 Codex 或 Claude Code 在多個模型、prompt、skill／MCP 條件下重複跑同一真實任務，混合 deterministic code checks、API request checks、guards 與 LLM judge，並比較 pass rate、時間與成本。每次 sandbox run 是乾淨環境，網路經 Guardian 代理；真 key 不進 sandbox，危險請求可在送出前封鎖。npm library 需 Node 22.18+；本機模式較快，但拿得到本機檔案與真實憑證。",
+      "whyItMatters": "你現在讓 Codex 大量修 skill-probe，最大風險已不是『模型會不會寫程式』，而是某次 prompt／skill／模型更新是否悄悄讓結果退步。ChatGPT Plus＋Codex 能做任務，Hurdle 補的是重複實驗、條件對照與安全邊界。",
+      "opportunity": "最小可用場景非常明確：把 CAP pipeline 的一個已驗證修復寫成 task，baseline 對比加上 repo instructions；之後可延伸到 HugAgent graph 生成的一致性。市場已有 Hurdle，商機不是再造平台，而是台灣研究室／教育團隊的 eval 設計與導入。",
+      "action": "Try now｜花 45 分鐘在獨立暫存目錄跑 `npx hurdle init --agent codex`，只放一個無憑證、可用 pytest 判定的 skill-probe 任務，各跑 baseline 與 with-instructions 3 次；先不要接 production key。",
+      "score": "關聯 5/5｜新能力 5/5｜商機 4/5"
+    },
+    {
+      "id": "2026-11-27-luma-brand-character",
+      "title": "3｜Luma 把品牌與角色變成長期記憶：同一 logo、產品、臉與服裝能跨圖片和影片持續套用",
+      "url": "https://lumalabs.ai/news/brand-kit-character-library",
+      "source": "Luma AI",
+      "publishedAt": "2026-11-25",
+      "category": "Try now",
+      "summary": "Luma 11 月 25 日推出 Brand Kit 與 Character Library，對所有 Luma 使用者開放。Brand Kit 可保存 logo、字體、顏色、產品與規則，也能從網站 URL 先生成草稿供人工審核；Character Library 保存角色的臉、身體、服裝、環境與表情，之後在 board 以 @ 引用。Luma 表示 agent 會依規則檢查輸出，不只是把參考圖放在資料夾。官方未公布一致性測試，因此仍需短片驗收。",
+      "whyItMatters": "ChatGPT 圖像生成能做好單張，但跨 10–100 張圖、影片、角色服裝與品牌規則的持續一致性仍需要大量重貼素材與人工挑錯。Luma 把這些約束變成專案級狀態，是明確超出一般 Chat 工作面的能力。",
+      "opportunity": "對教育內容有實際角度：固定同一位 CAP 解題角色、教材色系與圖示，批量做章節封面、短片與社群素材。最小 MVP 是一個角色＋一套品牌規則＋5 張圖與1段短片；風險是 logo、文字與細節仍可能漂移。",
+      "action": "Try now｜花 30 分鐘建立一個 skill-probe Brand Kit 與單一角色，只生成 5 張不同科目封面；逐張檢查 logo、配色、臉、服裝與文字，5/5 都過才測影片。",
+      "score": "關聯 4/5｜新能力 5/5｜商機 4/5"
+    },
+    {
+      "id": "2026-11-27-uber-agent-skills",
+      "title": "4｜Uber 一個月跑破百萬次 Agent Skills：真正可複製的不是 prompt，而是版本控管、分層與每次改動後的 eval",
+      "url": "https://www.uber.com/tw/en/blog/optimizing-ubers-agent-skills/",
+      "source": "Uber Engineering",
+      "publishedAt": "2026-11-23",
+      "category": "Try now",
+      "summary": "Uber 11 月 23 日公開其 agent skill 系統一年內從 1 個成長到 5,300+，單月被 Claude Code、OpenCode、Codex 與內部代理呼叫逾 100 萬次。Skills 放在 Git repo，由 owner、review 與 history 管理，並分 always-on、core、domain 三層。官方案例中，tracing skill 的單次成本降 46%，另一個 search skill 由四回合減到三回合、平均成本降 32%；但 Uber 也強調要在變更後持續量測，使用量不等於成功率。事件日期早於本期窗口一天，本期因 11 月 26 日公開分析與 Hurdle 發布才一起升榜。",
+      "whyItMatters": "你已經在 Codex 中累積大量 repo 規則與工作方法。Uber 證明可擴張的單位是『一個有 owner、有測試的 workflow』，不是把所有規則塞進全域提示；這直接影響 skill-probe 與未來研究 lab 的 agent 設計。",
+      "opportunity": "可把 CAP 資料抽取、視覺題封鎖、trusted-view promotion 等流程拆成 domain skills，再用 Hurdle 驗收。這能降低你每次重新解釋背景的成本，但目前沒有獨立付費產品證據。",
+      "action": "Try now｜花 30 分鐘列出目前 Codex 指令，挑一個高頻流程獨立成 domain skill：description 控制觸發，正文少於 500 行，腳本與參考資料延遲載入；先用三個真實任務驗證是否誤觸發。",
+      "score": "關聯 5/5｜新能力 3/5｜商機 4/5"
+    },
+    {
+      "id": "2026-11-27-openai-exoplanets",
+      "title": "5｜兩位業餘天文愛好者用 Codex／Astra 掃公開資料：從 10 萬到 1,900 萬顆星，找到待專業複核的候選訊號",
+      "url": "https://openai.com/index/searching-for-distant-planets-with-astra/",
+      "source": "OpenAI / SETI Institute",
+      "publishedAt": "2026-11-24",
+      "category": "Watch",
+      "summary": "OpenAI 11 月 24 日公布兩個獨立案例。一位工程師用 Codex 比較文獻方法、寫搜尋程式並讓兩個 agent 分別初篩與複核約 10 萬顆 Kepler 星體，找到兩個也被 SETI Institute 獨立搜尋捕捉的訊號；另一位創業者讓 Astra 閱讀方法、建軟體並分析約 1,900 萬顆星，第一輪得到 49 個候選，其中一個送交 TESS 團隊排隊分析。這些都只是候選，確認可能需數月或數年。",
+      "whyItMatters": "它跨過的不是 benchmark，而是『非該領域全職研究者＋公開資料＋代理』能完成過去需要專門程式與大量篩查的科學探索。對你而言，最可借鏡的是把不同 agent 分成候選生成與獨立複核，而非讓同一模型自評。",
+      "opportunity": "可遷移到 HugAgent：一個 agent 從 54 人 profile 生成個體圖與假設，另一個只用原始紀錄查反例與引用；但不要把未經人工驗證的候選當結論。沒有直接產品商機。",
+      "action": "Watch｜花 30 分鐘把 HugAgent pipeline 畫成 generator／verifier 兩階段，定義 verifier 不可讀 generator 的推理，只能讀候選、raw evidence 與明確 rubric。",
+      "score": "關聯 5/5｜新能力 4/5｜商機 3/5"
+    },
+    {
+      "id": "2026-11-27-google-quantum-agents",
+      "title": "6｜Gemini 4 代理團隊配 Lean 形式驗證：把量子演算法成本降 11.8 倍，AI 科研開始從『提想法』走到『可證明』",
+      "url": "https://deepmind.google/blog/finding-faster-quantum-algorithms-with-agents-and-formal-verification/",
+      "source": "Google DeepMind",
+      "publishedAt": "2026-11-23",
+      "category": "Watch",
+      "summary": "Google DeepMind 11 月 23 日公開 Gemini 4 代理團隊與 Lean 驗證框架。不同團隊獨立改良演算法，每四小時交換結果，候選先通過形式證明才進共享 notebook。官方報告融合模擬成本降 11.8 倍、光敏分子模擬降 8 倍、特定 Grover 實作快 2.57 倍；Lean library、問題與解答均開源。但這些大型電路尚無法在現有量子硬體上實測，離實際科學運算仍遠。本期因 11 月 26 日公開解讀才補入，事件日期清楚標為 11 月 23 日。",
+      "whyItMatters": "這是重要產業轉折：讓多代理大量探索，再用不可討價還價的 formal checker 篩掉錯誤，比『多 agent 互相辯論』可靠得多。你的 graph／routing 研究也應優先找可程式化驗證器，而不是把 judge LLM 當唯一真相。",
+      "opportunity": "近期沒有產品機會。可借用的設計是：候選生成可昂貴且多樣，promotion gate 必須是 deterministic constraint、資料庫 FK、pytest 或人工盲審；這與 skill-probe trusted views 的方向一致。",
+      "action": "Watch｜不用學量子。花 20 分鐘盤點兩個 repo：哪些主張能用程式檢查、哪些只能由 LLM judge、哪些必須人工；把三類 gate 分開。",
+      "score": "關聯 4/5｜新能力 5/5｜商機 2/5"
+    },
+    {
+      "id": "2026-11-27-opportunity-verdict",
+      "title": "本期商機｜沒有夠強的新獨立產品；最值得做的是『Agent 工作流驗收包』，先解自己的痛再看是否有人付費",
+      "url": "https://www.together.ai/blog/introducing-hurdle-run-agent-evals-on-your-api-skills-and-docs",
+      "source": "Editorial decision",
+      "publishedAt": "2026-11-27",
+      "category": "商機",
+      "summary": "可信目標使用者是已讓 Codex／Claude 操作真實 repo 的 solo builder、研究室與小型軟體團隊；痛點是 prompt、skill、MCP 或模型一更新，就不知道成功率、成本與安全是否退步。最小 MVP 是 5 個真實任務、baseline／with-skill 兩條件、deterministic checks＋少量 judge、隔離執行與一頁趨勢報告。分發可從 NYCU lab 與 skill-probe 的實際案例開始；收費只能是導入與客製 rubric，因 Hurdle 本身已開源。關鍵風險是測試集不代表真實任務、LLM judge 偏誤、重跑成本與敏感憑證。",
+      "whyItMatters": "Uber 的百萬次使用證明 skills 已成企業工作單位；Hurdle 剛好補上可重現驗收。但只有你自己的任務真的發現退步、避免事故或省下除錯時間，才算價值，不應因工具剛發布就另開產品。",
+      "opportunity": "判定：No strong standalone opportunity this cycle。升級條件是：用 5–10 個真實任務連續跑四週，至少抓到兩次原本會漏掉的 regression，且有 3 個外部團隊願意提供任務或付費導入。",
+      "action": "不開新 repo｜先在 skill-probe 建一個最小 eval suite；兩週後若它真的改變 merge 決策，再拿結果給實驗室兩位同學試用。",
+      "score": "關聯 5/5｜新能力 4/5｜商機 4/5"
+    },
+    {
+      "id": "2026-11-27-watchlist",
+      "title": "觀察清單｜Marlin 獨立品質、Luma 漂移率、Hurdle 真實成本、OpenAI Healthcare API",
+      "url": "https://help.openai.com/en/articles/9624314-model-release-notes",
+      "source": "Sakana AI / Luma / Together AI / OpenAI",
+      "publishedAt": "2026-11-27",
+      "category": "Watchlist",
+      "summary": "四個升榜條件：Marlin 在熟悉領域的引用正確率與反例覆蓋能勝過 ChatGPT＋Codex；Luma 以固定角色跨 20 張圖與 3 段影片仍維持 logo、臉與服裝；Hurdle sandbox 的完整成本與 setup 摩擦低到可放進每週 CI；OpenAI 11 月 24 日推出的 healthcare model configurations 在台灣可合法處理醫療資料，且有非供應商主導的臨床評估。騰訊 WeMM-Ecom、ERNIE 5.5 Flash 權重、一般 AI PC／伺服器財報與小型 OCR／翻譯模型都沒有跨過你現有工具邊界，暫不列主榜。",
+      "whyItMatters": "這些條件會真的改變工具選擇或研究設計；未達前不要增加訂閱、搬敏感資料或為單一發布重做架構。",
+      "opportunity": "若 agent eval 連續抓到真實 regression，才值得把它包成研究室導入服務；若 Luma 一致性通過，才值得做教育角色素材批量工作流。",
+      "action": "Watch｜下次只回報上述條件的實質變化，沒有新證據就不重複報導。",
+      "score": "關聯 4/5｜新能力 4/5｜商機 3/5"
+    }
+  ]
+}
